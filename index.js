@@ -43,7 +43,7 @@ app.get('/api/search', (req, res) => {
           return res.status(200).json({ source: 'Wikipedia API', ...responseJSON, });
         })
         .catch(err => {
-          return res.json(err);
+          return res.json({message:'Page Not Found'});
         });
     }
   });
